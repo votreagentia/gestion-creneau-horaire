@@ -21,8 +21,11 @@ const workDayStart = new Date(`${date}T${WORKDAY_START}Z`);
 const workDayEnd = new Date(`${date}T${WORKDAY_END}Z`);
 
 // Trier les créneaux occupés par ordre croissant de début
-const sortedOccupiedSlots = occupiedSlots.map(slot =>({start: new Date(slot.start),end: new Date(slot.end), 6}))
-.sort((a, b) => a.start - b.start);
+const sortedOccupiedSlots = occupiedSlots.map(slot =>
+    ({
+    start: new Date(slot.start),
+    end: new Date(slot.end),
+    })).sort((a, b) => a.start - b.start);
 // Initialiser les créneaux libres
 let freeSlots = [];
 let currentTime = workDayStart;
