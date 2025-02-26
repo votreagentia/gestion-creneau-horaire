@@ -71,8 +71,7 @@ res.status(200).json({ suggested_slots: suggestedSlots
 });
 });
 // Ajouter cette partie à votre fichier `index.js`
-// Route pour étendre le créneau de +1 jour, en sautant
-le week-end
+// Route pour étendre le créneau de +1 jour, en sautant le week-end
 app.post('/extend-slots', (req, res) => {
 const { requested_datetime } = req.body;
 // Vérifier que la date/heure souhaitée est bien fourn
