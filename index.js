@@ -19,7 +19,7 @@ app.post('/occupied-slots', (req, res) => {
   }
 
   // Récupérer la date à partir du premier créneau pour la plage horaire de travail
-  const date = occupiedSlots[0].start.split("T")[0];
+  const date = occupiedSlots[0].start.split('T')[0];
   const workDayStart = new Date(`${date}T${WORKDAY_START}Z`);
   const workDayEnd = new Date(`${date}T${WORKDAY_END}Z`);
 
